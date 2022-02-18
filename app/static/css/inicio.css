@@ -1,0 +1,27 @@
+.img-fluid{
+      width: 60px;
+      height: 60px;
+}
+
+.imgInicio {
+  max-width: 100%;
+  height: auto;
+}
+.navbar .navbar-collapse .nav-item .nav-link {
+  overflow-y: auto;
+  color: white;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+.contenidoPrincipal{
+font-family: Helvetica, Geneva, Arial, sans-serif;
+      height:100%;
+      width:100%;
+      padding-top:90px;
+      text-align:center;
+      background-color:#37DCEB;
+}

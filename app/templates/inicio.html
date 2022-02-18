@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{% block title %} Bienvenido al Sistema de Gestión de Eventos de ONG ABC {% endblock %}</h1>
+
+    <picture>
+      <source
+        media="(min-width: 250px)"
+        srcset="./static/images/logoONG.png">
+      <source
+        media="(min-width: 150px)"
+        srcset="./static/images/logoONG.png">
+      <img class="imgInicio"
+        src="./static/images/logoONG.png"
+        alt="ONG  ABC "
+      width="300" height="300">
+    </picture>
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card ">
+    <div class="card-body">
+        <h3 class="card-title text-center">Operadores</h3>
+        <div class="card-text">
+            {% if msg !='' %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong>{{msg}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+            {% endif%}
+            <form method="POST" id="user-form" name="user-form">
+                <div class="form-group mt-3">
+                    <div class="row">
+                            <label for="idoperador" class="col-3 col-form-label">Codigo: </label>
+                            <input type="text" class="form-control col-4" name="idoperador" id="idoperador">
+                        <div class="col-3">
+                            <button type="button" onclick="buscarOperadores()" id="btn-buscar"
+                                class="btn btn-info">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control " name="dni" id="dni" required>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <label for="nombre">Nombres</label>
+                        <input type="text" class="form-control " name="nombre" id="nombre" required>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control " name="apellido" id="apellido" required>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <label for="fechanac">Fecha Nacimiento</label>
+                        <input type="date" class="form-control " name="fechanac" id="fechanac" required>
+                    </div>
+                </div>
+
+                 <div class="form-group m-3">
+                    <div class="col-md-12 text-center">
+                        <button type="button" id="btn-nuevo" onclick="nuevoOperadores()"
+                            class="btn btn-danger">Nuevo</button>
+                        <button type="submit" id="btn-guardar" class="btn btn-danger" disabled>Guardar</button>
+                        <button type="submit" onclick="eliminarOperadores()" id="btn-eliminar" class="btn btn-danger" disabled>Eliminar</button>
+                        <button type="button" onclick="salir()" id="btn-salir" class="btn btn-danger">Salir</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script src="static/js/operadores.js"></script>
+{% endblock %}
+
